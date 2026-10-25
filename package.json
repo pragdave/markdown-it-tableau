@@ -1,0 +1,49 @@
+{
+  "name": "markdown-it-tableau",
+  "version": "0.1.0",
+  "description": "A markdown-it plugin that renders Tableau (ts-tableau) fenced code blocks as HTML tables.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pragdave/markdown-it-tableau.git"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "markdown",
+    "table",
+    "tableau"
+  ],
+  "author": "Dave Thomas (pragdave)",
+  "license": "ISC",
+  "dependencies": {
+    "ts-tableau": "^0.4.0"
+  },
+  "peerDependencies": {
+    "markdown-it": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "markdown-it": "^15.0.3",
+    "typescript": "^5.6.2",
+    "vitest": "^3.2.0"
+  }
+}
